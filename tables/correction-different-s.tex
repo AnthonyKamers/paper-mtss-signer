@@ -1,0 +1,13 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+\hline
+\multicolumn{1}{|l|}{\textbf{$|m|$ (kB)}} & \multicolumn{1}{l|}{\textbf{s}} & \multicolumn{1}{l|}{\textbf{execution time}} \\ \hline
+12                                      & 2                               & 0,59239 s                                    \\
+16                                      & 3                               & 134,49 s                                     \\
+20                                      & 4                               & 8,48 h *                                     \\
+24                                      & 5                               & 80,2 days *                                 
+\end{tabular}
+    \caption{Correcting files using different block sizes $s$ using $\Sigma =$ RSA-2048, $H =$ BLAKE2b, $k = 3, n = 4096, t = 256, d = 7, |I| = 1$. * means it was made approximations}
+    \label{table:correction-different-s}
+\end{table}

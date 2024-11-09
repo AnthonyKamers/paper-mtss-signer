@@ -1,0 +1,39 @@
+\begin{table}[ht]
+  \setlength{\tabcolsep}{5.75pt}
+  \centering
+  \caption{Performance and output size of \textsc{MTSS}($\Sigma, \H, \M$).\textsc{Sig} for several choices of $\Sigma$, $\H$ and security parameter $\lambda$, considering $\M = 2$-CFF($25, 125$), $k = 3$ and a 1.19MB plain text file as input.}
+  \begin{tabular}{crlrrrrrrrr}
+    \toprule
+    &
+    \multicolumn{1}{r}{\multirow{5}{*}{$\lambda$}}
+        & \multicolumn{1}{c}{\multirow{5}{*}{$\Sigma$}}
+        & \multicolumn{6}{c}{\textsc{Sig} time (ms)}
+        & \multicolumn{2}{c}{\multirow{3}{*}{$|\sigma|$ (bytes)}} \\
+    \cmidrule{4-9}
+    & &
+        & \multicolumn{2}{c}{SHA-2}
+        & \multicolumn{2}{c}{SHA-3}
+        & \multicolumn{2}{c}{BLAKE}
+        & \\
+    \cmidrule{4-11}
+    & & & 256 & 512 & 256 & 512 & 2s & 2b & 256 & 512 \\
+    \cmidrule{2-11}
+    \multirow{6}{*}{\rotatebox[origin=c]{90}{Raw $\Sigma$}}
+    & 128 & RSA-2048         & 4.83 & 3.63 & 3.93 & 6.42 & 2.49 & 3.32 & 256  & 256  \\
+    & 128 & ML-DSA-44        & 3.93 & 2.67 & 2.96 & 5.49 & 1.54 & 2.36 & 2360 & 2360 \\
+    & 128 & Ed25519          &      & 3.08 &      &       &      &      &      & 64   \\
+    & 256 & RSA-4096         & 8.83 & 7.64 & 7.96 & 10.44 & 6.54 & 7.38 & 512  & 512  \\
+    & 256 & ML-DSA-65        & 3.98 & 2.71 & 2.98 & 5.55 & 1.60 & 2.49 & 3220 & 3220 \\
+    & 512 & ML-DSA-87        & 4.10 & 2.73 & 3.02 & 5.58 & 1.62 & 2.41 & 4490 & 4490 \\
+    \cmidrule{2-11}
+    \multirow{6}{*}{\rotatebox[origin=c]{90}{\textsc{MTSS}}} 
+    & 128 & RSA-2048         & 27.35 & 19.42 & 21.76 & 36.85 & 10.86 & 15.63 & 1088 & 1880  \\
+    & 128 & ML-DSA-44        & 26.44 & 18.85 & 21.27 & 36.04 & 10.36 & 15.2 & 3180 & 3990  \\
+    & 128 & Ed25519          &       & 19.99 &       &       &       &       &      & 1690  \\
+    & 256 & RSA-4096         & 31.32 & 23.37 & 25.74 & 40.87 & 14.9 & 19.66 & 1310 & 2120  \\
+    & 256 & ML-DSA-65        & 26.63 & 18.83 & 21.1 & 35.93 & 10.22 & 15.29 & 4030 & 4840  \\
+    & 512 & ML-DSA-87        & 26.76 & 18.98 & 21.12 & 36.17 & 10.02 & 15.05 & 5300 & 6110  \\
+    \bottomrule
+  \end{tabular}
+  \label{table:performance-signature-traditional-mtss}
+\end{table}

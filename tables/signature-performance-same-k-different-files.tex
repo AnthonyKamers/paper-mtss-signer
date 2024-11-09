@@ -1,0 +1,14 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrlrll}
+\hline
+\multicolumn{1}{|l|}{\textbf{q}} & \multicolumn{1}{l|}{\textbf{t}} & \multicolumn{1}{l|}{\textbf{n}} & \multicolumn{1}{l|}{\textbf{$|m|$} (kB)} & \multicolumn{1}{l|}{\textbf{d}} & \multicolumn{1}{l|}{\textbf{execution time (ms)}} & \multicolumn{1}{l|}{\textbf{$|\sigma|$ (kB)}} \\ \hline
+7                                & 49                              & 2401                            & 4.688                          & 2                               & 87.10                                     & 1.81                               \\
+8                                & 64                              & 4096                            & 7.999                          & 2                               & 169.60                                     & 2.28                               \\
+9                                & 81                              & 6561                            & 12.813                         & 2                               & 313.27                                     & 2.81                               \\
+11                               & 121                             & 14641                           & 28.595                         & 3                               & 890.33                                     & 4.06                               \\
+13                               & 169                             & 28561                           & 55.782                         & 4                               & 2178.99                                     & 5.56                              
+\end{tabular}
+    \caption{Performance of \textit{sign} algorithm execution for same $k = 4$, but different text files, giving different $q, t$, depending on $n$; $\Sigma = $ RSA-2048, $H = $ SHA256}
+    \label{table:performance-signature-using-same-k}
+\end{table}

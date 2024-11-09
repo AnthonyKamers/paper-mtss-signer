@@ -1,0 +1,13 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{rr}
+\hline
+\multicolumn{1}{|l|}{\textbf{$|I|$}} & \multicolumn{1}{l|}{\textbf{execution time (ms)}} \\ \hline
+0                                  & 0.0016                                            \\
+1                                  & 52.75                                             \\
+4                                  & 200.29                                            \\
+7                                  & 351.32                                           
+\end{tabular}
+    \caption{Performance for correcting an 8191B text file, signed using MTSS with $\Sigma =$ RSA-2048, $H =$ BLAKE2b, $n = 4096, t = 126, k = 3, d = 7$. Each block of the file has $s = 1$}
+    \label{table:correction-different-i}
+\end{table}

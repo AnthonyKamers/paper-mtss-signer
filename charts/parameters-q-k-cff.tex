@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+  \begin{axis}[
+        xlabel={$q$},
+        ylabel={$k$},
+        zlabel={Time (ms)},
+        zmode=log,
+        grid=major,
+        xtick={2, 5, 7, 8, 9, 11, 13, 16},
+        ytick={2, 3, 4, 5},
+        % width=7cm,
+        % height=5cm,
+        width=6.7cm,
+        view={330}{30}
+    ]
+    \addplot3 [mesh, color=gray] gnuplot [raw gnuplot] {
+      set dgrid3d 20, 20, 20;
+      splot 'charts/q-k-cff.txt' using 1:2:3 with lines
+    };
+  \end{axis}
+\end{tikzpicture}

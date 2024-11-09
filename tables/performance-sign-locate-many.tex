@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+  \setlength{\tabcolsep}{10pt}
+  \centering
+  \caption{Performance of signature operations of MTSS($\Sigma, \H, \M$) for several choices of $\M$, plain text files of different sizes, and $|I| = 1$.}
+  \begin{tabular}{rrrrrrrrr}
+    \toprule
+    \multicolumn{5}{c}{Parameters of $\M$} & \multicolumn{2}{c}{Size  (kB)} & \multicolumn{2}{c}{Time (ms)} \\
+    \cmidrule(lr){1-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+    $k$ & $q$ & $t$ & $n$ & $d$ & $m$ & $\sigma$ & \textsc{Sig} & \textsc{Ver} \\
+    \midrule
+    4 & 7  & 49   & 2401  & 2  & 4.69 & 3.38 & 56.98   & 33.41   \\
+    4 & 9  & 81   & 6561  & 2  & 12.8 & 5.38 & 156.27  & 185.95  \\
+    4 & 11 & 121  & 14641 & 3  & 28.6 & 7.88 & 471.47  & 777.91  \\
+    4 & 13 & 169  & 28561 & 4  & 55.8 & 10.9 & 1318.92 & 2609.34 \\
+    \midrule
+     - &  -  & 15   & \multirow{4}{*}{4096}  & 1  & \multirow{4}{*}{8}    & 1.25 & 96.21   & 88.41   \\
+    4 & 8  & 64   &   & 2  &    & 4.31 & 91.30   & 82.93   \\
+    3 & 16 & 256  &   & 7  &    & 16.3 & 187.37  & 191.41  \\
+    2 & 64 & 4096 &   & 63 &    & 256  & 1720.94 & 2238.13 \\
+    \bottomrule
+  \end{tabular}
+  \label{table:sign-locate-different-parameters}
+\end{table}

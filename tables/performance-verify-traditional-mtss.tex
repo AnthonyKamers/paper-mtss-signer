@@ -1,0 +1,40 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{|rllllll|}
+\hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{$\lambda$}}} &
+  \multicolumn{1}{l|}{\multirow{2}{*}{\textbf{Scheme}}} &
+  \multicolumn{5}{l|}{\textbf{Verifying time (ms)}} \\ \cline{3-7} 
+\multicolumn{1}{|l|}{} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{\textbf{SHA-256}} &
+  \multicolumn{1}{l|}{\textbf{SHA-512}} &
+  \multicolumn{1}{l|}{\textbf{SHA3-256}} &
+  \multicolumn{1}{l|}{\textbf{SHA3-512}} &
+  \multicolumn{1}{l|}{\textbf{BLAKE2b}} \\ \hline
+128 & RSA-2048    & 4.77  & 3.43 & 3.85 & 6.35  & 2.29 \\
+256 & RSA-4096    & 4.93  & 3.70 & 4.03 & 6.63  & 2.55 \\
+128 & ED25519     & -     & 4.52 & -    & -     & -    \\
+128 & Dilithium2  & 4.47  & 3.27 & 3.57 & 6.11  & 2.10 \\
+256 & Dilitihium3 & 4.64  & 3.46 & 3.67 & 6.31  & 2.19 \\
+512 & Dilitihium5 & 4.61  & 3.39 & 3.69 & 6.44  & 2.19 \\
+\hline
+128 & RSA-2048    & 10.62 & 7.96 & 8.61 & 13.98 & 4.91 \\
+256 & RSA-4096    & 11.00 & 8.14 & 8.93 & 14.21 & 5.24 \\
+128 & ED25519     & -     & 8.77 & -    & -     & -    \\
+128 & Dilithium2  & 10.19 & 7.61 & 8.27 & 13.85 & 4.89 \\
+256 & Dilitihium3 & 10.13 & 7.59 & 8.42 & 13.56 & 4.84 \\
+512 & Dilitihium5 & 10.24 & 7.60 & 8.28 & 13.59 & 4.77 \\
+\hline
+128 & RSA-2048    & 4.26  & 3.03 & 3.61 & 6.06  & 3.44 \\
+256 & RSA-4096    & 5.11  & 3.37 & 3.74 & 6.26  & 3.64 \\
+128 & ED25519     & -     & 4.10 & -    & -     & -    \\
+128 & Dilithium2  & 4.57  & 3.19 & 3.33 & 6.18  & 1.77 \\
+256 & Dilitihium3 & 4.12  & 2.92 & 3.38 & 6.00  & 1.76 \\
+512 & Dilitihium5 & 4.51  & 3.07 & 3.37 & 6.06  & 1.91 \\
+\hline
+\end{tabular}
+\caption{Performance between MTSS with no modification (above), MTSS with one modification $|I| = 1$ (middle), and traditional signature schemes (below).}
+\label{table:performance-verify-traditional-mtss}
+\end{table}

@@ -1,0 +1,18 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+\hline
+\multicolumn{1}{l}{\textbf{n}} &
+\textbf{$|m|$.txt} &
+\textbf{$|m|$.xml} &
+\textbf{exec. time (.txt)} &
+\textbf{exec. time (.xml)} &
+\textbf{$\Delta$ time} \\ \hline
+64                               & 511B              & 528B              & 0,041 ms                   & 0,400 ms                   & 0,358 ms         \\
+512                              & 4 kB              & 4,0 kB            & 0,039 ms                   & 2,946 ms                   & 2,907 ms         \\
+4096                             & 32 kB             & 32,01 kB          & 0,153 ms                   & 89,077 ms                  & 88,923 ms        \\
+32768                            & 256 kB            & 256,02 kB         & 1,028 ms                   & 7,683 s                    & 7,682 s          \\
+\end{tabular}
+    \caption{Mean execution time to separate a file in blocks according to $n$ and its file type}
+    \label{table:document-type-execution-time}
+\end{table}

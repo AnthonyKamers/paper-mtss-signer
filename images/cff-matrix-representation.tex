@@ -1,0 +1,42 @@
+\begin{figure}[htbp]
+  \centering
+  \subfloat[
+    Incidence matrix of a $2$-CFF($9, 12$).
+  ]{\label{fig:example}\resizebox{.45\textwidth}{!}{$
+  \begin{array}{l|*{12}{l}|}
+    \multicolumn{1}{l}{} & a & b & c & d & e & f & g & h & i & j & k & \multicolumn{1}{l}{l} \\
+    \cline{2-13}
+    1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+    2 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+    3 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \\
+    4 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\
+    5 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+    6 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 \\
+    7 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    8 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    9 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 \\
+    \cline{2-13}
+    \end{array}
+  $}} \hfill
+  \subfloat[
+    Procedure to identify defects.
+  ]{\label{fig:procedure}\resizebox{.52\textwidth}{!}{$
+  \begin{array}{l|*{12}{l}|}
+    \multicolumn{1}{l}{} & \gf{a} & \gf{b} & \gf{c} & \rf{d} & \gf{e} & \gf{f} & \gf{g} & \rf{h} & \gf{i} & \gf{j} & \gf{k} & \multicolumn{1}{l}{\gf{l}} \\
+    \cline{2-13}
+    \text{Test 1} \;\rf{\text{\xmark}} & 1 & 0 & 0 & \red 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+    \text{Test 2} \;\rf{\text{\xmark}} & 1 & 0 & 0 & 0 & 1 & 0 & 0 & \red 1 & 0 & 0 & 1 & 0 \\
+    \text{Test 3} \;\gf{\text{\cmark}} & \g 1 & \g 0 & \g 0 & \g 0 & \g 0 & \g 1 & \g 0 & \g 0 & \g 1 & \g 0 & \g 0 & \g 1 \\
+    \text{Test 4} \;\rf{\text{\xmark}} & 0 & 1 & 0 & \red 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\
+    \text{Test 5} \;\gf{\text{\cmark}} & \g 0 & \g 1 & \g 0 & \g 0 & \g 1 & \g 0 & \g 1 & \g 0 & \g 0 & \g 0 & \g 0 & \g 1 \\
+    \text{Test 6} \;\rf{\text{\xmark}} & 0 & 1 & 0 & 0 & 0 & 1 & 0 & \red 1 & 0 & 1 & 0 & 0 \\
+    \text{Test 7} \;\rf{\text{\xmark}} & 0 & 0 & 1 & \red 1 & 0 & 0 & 0 & \red 1 & 0 & 0 & 0 & 1 \\
+    \text{Test 8} \;\gf{\text{\cmark}} & \g 0 & \g 0 & \g 1 & \g 0 & \g 1 & \g 0 & \g 0 & \g 0 & \g 1 & \g 1 & \g 0 & \g 0 \\
+    \text{Test 9} \;\gf{\text{\cmark}} & \g 0 & \g 0 & \g 1 & \g 0 & \g 0 & \g 1 & \g 1 & \g 0 & \g 0 & \g 0 & \g 1 & \g 0 \\
+    \cline{2-13}
+    \end{array}
+  $}}
+  \caption{Matrix representation of a CFF and defect location procedure. % Adapted from~\cite{tcc-paola}.
+  }
+  \label{fig:cff-procedure-defects}
+\end{figure}

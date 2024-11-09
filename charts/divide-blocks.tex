@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+    \begin{semilogyaxis}[
+        % title={DivideBlocks algorithm efficiency},
+        xlabel={$n$},
+        ylabel={Time (ms)},
+        legend pos=north west,
+        grid=major,
+        % width=7cm,
+        % height=5cm,
+        width=6.5cm,
+        log basis x={10},
+        xtick={1, 5, 8},
+        xticklabels={64,4096,32768}
+    ]
+    \addplot[
+        color=lightgray,
+        mark=none,
+        thick
+        ] coordinates {
+        (1, 0.037700000000000004)
+        (2, 0.0198)
+        (3, 0.020200000000000003)
+        (4, 0.031200000000000002)
+        (5, 0.07540000000000001)
+        (6, 0.1451)
+        (7, 0.2788)
+        (8, 0.7108)
+    };
+    \addlegendentry{Plain text}
+    
+    \addplot[
+        color=gray,
+        mark=none,
+        thick
+        ] coordinates {
+        (1, 0.32380000000000003)
+        (2, 1.2419)
+        (3, 2.7662)
+        (4, 8.1549)
+        (5, 86.5322)
+        (6, 334.07800000000003)
+        (7, 1718.2588)
+        (8, 7686.303800000001)
+    };
+    \addlegendentry{XML}
+    
+    \end{semilogyaxis}
+\end{tikzpicture}

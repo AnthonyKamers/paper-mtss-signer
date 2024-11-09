@@ -1,0 +1,45 @@
+\begin{table}[ht]
+  \setlength{\tabcolsep}{7pt}
+  \centering
+  \caption{Performance and output size of \textsc{MTSS}($\Sigma, \H, \M$) \textsc{Ver} for several choices of $\Sigma$, $\H$ and security parameter $\lambda$, considering $\M = 2$-CFF($25, 125$), $k = 3$ and a 1.19MB plain text file as input.}
+  \begin{tabular}{crlrrrrrr}
+    \toprule
+    &
+    \multicolumn{1}{r}{\multirow{5}{*}{$\lambda$}}
+        & \multicolumn{1}{c}{\multirow{5}{*}{$\Sigma$}}
+        & \multicolumn{6}{c}{\textsc{Ver} time (ms)} \\
+    \cmidrule{4-9}
+    & &
+        & \multicolumn{2}{c}{SHA-2}
+        & \multicolumn{2}{c}{SHA-3}
+        & \multicolumn{2}{c}{BLAKE} \\
+    \cmidrule{4-9}
+    & & & 256 & 512 & 256 & 512 & 2s & 2b \\
+    \cmidrule{2-9}
+    \multirow{6}{*}{\rotatebox[origin=c]{90}{Raw $\Sigma$}}
+    & 128 & RSA-2048         & 4.09 & 2.87 & 3.15 & 5.66 & 3.21 & 4.84   \\
+    & 128 & ML-DSA-44        & 3.88 & 2.61 & 2.90 & 5.47 & 1.51 & 2.30   \\
+    & 128 & Ed25519          &      & 3.84 &      &      &      &        \\
+    & 256 & RSA-4096         & 4.37 & 3.17 & 3.44 & 5.94 & 3.50 & 5.12   \\
+    & 256 & ML-DSA-65        & 3.91 & 2.62 & 2.92 & 5.47 & 1.51 & 2.32   \\
+    & 512 & ML-DSA-87        & 3.91 & 2.64 & 2.94 & 5.49 & 1.53 & 2.34   \\
+    \cmidrule{2-9}
+    \multirow{6}{*}{\rotatebox[origin=c]{90}{\textsc{MTSS} ($|I| = 0$)}}
+    & 128 & RSA-2048         & 4.16 & 2.95 & 3.25 & 5.80 & 1.81 & 2.64  \\
+    & 128 & ML-DSA-44        & 3.94 & 2.69 & 3.00 & 5.55 & 1.55 & 2.37  \\
+    & 128 & Ed25519          &      & 3.90 &      &      &      &       \\
+    & 256 & RSA-4096         & 4.45 & 3.23 & 3.54 & 6.08 & 2.10 & 2.91  \\
+    & 256 & ML-DSA-65        & 3.95 & 2.70 & 3.08 & 5.58 & 1.56 & 2.38  \\
+    & 512 & ML-DSA-87        & 3.95 & 2.72 & 3.05 & 5.57 & 1.58 & 2.40  \\
+    \cmidrule{2-9}
+    \multirow{6}{*}{\rotatebox[origin=c]{90}{\textsc{MTSS} ($|I| = 1$)}} 
+    & 128 & RSA-2048         & 159.95 & 174.53 & 162.22 & 162.29 & 153.15 & 162.94   \\
+    & 128 & ML-DSA-44        & 156.93 & 177.55 & 159.49 & 165.35 & 163.51 & 154.37   \\
+    & 128 & Ed25519          &       & 165.41 &      &       &      &        \\
+    & 256 & RSA-4096         & 169.32 & 153.97 & 166.26 & 161.66 & 167.44 & 160.91   \\
+    & 256 & ML-DSA-65        & 160.05 & 191.31 & 165.23 & 162.47 & 154.52 & 160.33   \\
+    & 512 & ML-DSA-87        & 158.34 & 162.69 & 167.37 & 158.83 & 162.81 & 152.57   \\
+    \bottomrule
+  \end{tabular}
+  \label{table:performance-verify-traditional-mtss}
+\end{table}
